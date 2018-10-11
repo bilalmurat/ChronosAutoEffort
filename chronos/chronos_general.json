@@ -1,0 +1,51 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Chronos",
+		"_postman_id": "77200d01-080f-3afa-f2df-b866580a2115",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login Chronos",
+			"request": {
+				"url": "https://chronos.kocsistem.com.tr/Chronos/Main/Login.aspx/UserLoginCaptcha",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"userchangestatus\": false, \n\t\"UserName\": \"{username}\", \n\t\"Password\": \"{password}\", \n\t\"remember\": true, \n\t\"g_recaptcha\": \"\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save Activity",
+			"request": {
+				"url": "https://chronos.kocsistem.com.tr/Chronos/Definitions/UserActivityEntry.aspx/Save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"actualTimeEntryId\":\"0\",\n\t\"customerId\":\"3206\",\n\t\"workId\":\"841923\",\n\t\"activityId\":\"66\",\n\t\"activityDate\":\"{activityDate}\",\n\t\"durationHour\":\"8\",\n\t\"durationMinute\":\"\",\n\t\"description\":\"{description}\",\n\t\"overTime\":false\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
